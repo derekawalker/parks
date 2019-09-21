@@ -1,0 +1,50 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.page-node-type-park {
+  .page-title {
+    text-align: center;
+  }
+}
+
+.node--view-mode-teaser.node--type-park {
+  .teaser-inner {
+    display: flex;
+    align-items: flex-end;
+
+    &.has-background {
+      min-height: 400px;
+    }
+  }
+
+  .teaser-title {
+    font-size: 2.5em;
+    width: 100%;
+    font-family: $font-script;
+
+    a {
+      &:after {
+        margin-right: 1em;
+      }
+    }
+
+    .field--name-title {
+      display: block;
+      padding: 0.75em 1em;
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {
+}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {
+}

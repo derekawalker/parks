@@ -1,0 +1,6 @@
+base:
+  css:
+    base:
+      dist/css/styles.css: {}
+      "//use.fontawesome.com/releases/v5.7.2/css/all.css":
+        { type: external, minified: true }

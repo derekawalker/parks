@@ -1,0 +1,57 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.region-content-top {
+  ul.tabs {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: $gray-05;
+    border-radius: $rad;
+    padding: 0.125em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+
+    > li {
+      display: block;
+      margin: 0.125em;
+
+      a {
+        padding: 0.35em 0.75em;
+        border-radius: $rad-inner;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 10px;
+        color: $gray-6;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: rgba(255, 255, 255, 1);
+          color: $orange;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          color: $gray-3;
+        }
+
+        &.is-active {
+          background: $white;
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {
+}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {
+}

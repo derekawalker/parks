@@ -1,0 +1,103 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.node--view-mode-teaser {
+  background: #fff;
+  position: relative;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease-out;
+  background-size: cover;
+  background-position: center center;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.5s ease-out;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.25);
+  }
+
+  .node__content {
+    border-bottom: 1px solid transparent;
+
+    .field {
+      margin: 0.125rem 1rem;
+      padding: 0.25rem 0.5rem;
+      background: #fff;
+
+      &:first-child {
+        margin: 1rem 1rem 0.125rem;
+      }
+
+      &:last-child {
+        margin: 0.125rem 1rem 1rem;
+      }
+    }
+
+    .field--label-inline {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .field__label {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 900;
+        font-size: 11px;
+      }
+
+      .field__item {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 300;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .teaser-title {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.25)
+    );
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 100;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 0.75rem;
+      }
+    }
+
+    .field--name-title {
+      display: block;
+      padding: 1rem 1.25rem;
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {
+}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {
+}

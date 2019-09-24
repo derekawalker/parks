@@ -1,15 +1,24 @@
 // Mobile (up to 447px) ---------------------------------
 // ------------------------------------------------------
-.page-node-type-park {
-  .page-title {
-    text-align: center;
-  }
-}
-
 .node--view-mode-teaser.node--type-park {
+  &:hover,
+  &:focus,
+  &:active {
+    .teaser-title {
+      background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75));
+      text-decoration: none;
+      transition: 'background' 0.25s ease-out;
+    }
+  }
+
+  article {
+    background-position: center center;
+    background-size: cover;
+  }
+
   .teaser-inner {
-    display: flex;
     align-items: flex-end;
+    display: flex;
 
     &.has-background {
       min-height: 400px;
@@ -17,19 +26,24 @@
   }
 
   .teaser-title {
-    font-size: 2.5em;
-    width: 100%;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35));
+    color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
     font-family: $font-script;
+    font-size: 2.5em;
+    font-weight: 100;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0.65em 1em 0.55em;
+    transition: 'background' 0.25s ease-out;
+    width: 100%;
 
-    a {
-      &:after {
-        margin-right: 1em;
-      }
-    }
-
-    .field--name-title {
-      display: block;
-      padding: 0.75em 1em;
+    &:after {
+      content: '\f054';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
     }
   }
 }

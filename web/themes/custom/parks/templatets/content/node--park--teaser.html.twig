@@ -70,6 +70,11 @@
  *   in different view modes.
  */
 #}
+
+{# {{ kint(content.field_background_image) }} #}
+{% set background_image = content.field_background_image['#items'].entity.uri.value %}
+{% set main_photo = content.field_image['#items'].entity.uri.value %}
+
 {%
   set classes = [
     'node',
@@ -83,26 +88,30 @@
 {{ attach_library('classy/node') }}
 
 <a{{ attributes.addClass(classes) }} href="{{ url }}">
+  {% if background_image %}
+  <article style="background-image:url({{ file_url(background_image) }});">
+    <div class="teaser-inner has-background">
+  {% elseif main_photo %}
+  <article style="background-image:url({{ file_url(main_photo) }});">
+    <div class="teaser-inner has-background">
+  {% else %}
   <article>
     <div class="teaser-inner">
+  {% endif %}
 
-      {% if content.field_image %}
-      <div class="teaser-image">
-        {{ content.field_image }}
-      </div>
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h2{{ title_attributes.addClass('teaser-title') }}>
+          {{ label }}
+        </h2>
       {% endif %}
+      {{ title_suffix }}
 
+      {#
       <div{{ content_attributes.addClass('node__content') }}>
-        {{ title_prefix }}
-        {% if label and not page %}
-          <h2{{ title_attributes.addClass('teaser-title') }}>
-            {{ label }}
-          </h2>
-        {% endif %}
-        {{ title_suffix }}
-
-        {{ content|without('field_image') }}
+        {{ content|without('field_background_image', 'field_image') }}
       </div>
+      #}
     </div>
 
   </article>

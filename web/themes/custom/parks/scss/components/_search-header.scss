@@ -6,57 +6,58 @@
     width: 100%;
 
     .contextual {
-      right: auto;
       left: 1rem;
+      right: auto;
     }
 
-    >form {
+    > form {
+      align-items: center;
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
       justify-content: space-between;
       width: 100%;
     }
 
     .form-item {
-      margin: 0;
       height: 40px;
+      margin: 0;
       width: 100%;
     }
 
     .form-search {
       border: 1px solid $gray-c;
-      border-right: 0;
       border-radius: 20px 0 0 20px;
-      height: 40px;
-      padding: 0 1rem;
-      margin: 0;
+      border-right: 0;
       color: $gray-6;
+      height: 40px;
+      margin: 0;
+      padding: 0 1rem;
       width: 100%;
     }
 
     .form-actions {
-      position: relative;
       border-radius: 0 20px 20px 0;
       color: $gray-3;
+      position: relative;
 
       &:before {
-        color: inherit;
-        content: "\f002";
-        font-family: "FontAwesome";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-align: center;
-        height: 40px;
-        width: 40px;
-        padding-right: 5px;
-        line-height: 40px;
-        z-index: 0;
         border-left: 1px solid $gray-c;
+        bottom: 0;
+        color: inherit;
+        content: '\f002';
+        display: block;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        height: 40px;
+        left: 0;
+        line-height: 40px;
+        padding-right: 5px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 40px;
+        z-index: 0;
       }
 
       &:hover,
@@ -68,19 +69,19 @@
     }
 
     .form-submit {
+      background: transparent;
       border: 1px solid $gray-c;
       border-left: 0;
       border-radius: 0 20px 20px 0;
+      box-shadow: none;
       height: 40px;
-      width: 40px;
+      margin: 0;
       overflow: hidden;
       padding: 0;
-      text-indent: 40px;
-      margin: 0;
       position: relative;
-      background: transparent;
+      text-indent: 40px;
+      width: 40px;
       z-index: 1;
-      box-shadow: none;
 
       &:hover,
       &:active,
@@ -103,8 +104,10 @@
 
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
-@media (min-width: $desk) {}
+@media (min-width: $desk) {
+}
 
 // Wide (over 1340px) -----------------------------------
 // ------------------------------------------------------
-@media (min-width: $wide) {}
+@media (min-width: $wide) {
+}

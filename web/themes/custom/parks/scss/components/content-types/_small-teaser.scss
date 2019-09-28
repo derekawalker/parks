@@ -1,4 +1,4 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .node--view-mode-small-teaser {
   background: #fff;
@@ -36,12 +36,25 @@
   }
 
   .teaser-title {
+    font-size: 1.5em;
     font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
   }
 
   .field--name-body {
     > *:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+// Phablet (568px to 767px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) {
+  .node--view-mode-small-teaser {
+    .teaser-title {
+      font-size: 1.65em;
     }
   }
 }
@@ -54,6 +67,11 @@
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
 @media (min-width: $desk) {
+  .node--view-mode-small-teaser {
+    .teaser-title {
+      font-size: 1.75em;
+    }
+  }
 }
 
 // Wide (over 1340px) -----------------------------------

@@ -9,9 +9,9 @@
 }
 
 .region-inner {
-  padding: 1.5rem;
   margin: 0 auto;
   max-width: $max-width;
+  padding: 1.5rem;
 
   &:empty {
     padding: 0;
@@ -33,18 +33,18 @@
     }
 
     .layout-content {
-      width: 60%;
       order: 1;
+      width: 60%;
     }
 
     .layout-sidebar-first {
-      width: 100%;
       order: 3;
+      width: 100%;
     }
 
     .layout-sidebar-second {
-      width: 40%;
       order: 2;
+      width: 40%;
     }
   }
 
@@ -132,13 +132,13 @@
     }
 
     .layout-sidebar-first {
-      width: 25%;
       order: 2;
+      width: 25%;
     }
 
     .layout-sidebar-second {
-      width: 20%;
       order: 3;
+      width: 20%;
     }
   }
 

@@ -1,4 +1,4 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .block-system-branding-block {
   margin: 0 0.75rem 0 0;
@@ -6,11 +6,11 @@
 
 .site-logo {
   display: block;
-  width: 40px;
+  width: 26px;
 
   img {
-    width: 100%;
     display: block;
+    width: 100%;
   }
 }
 
@@ -18,7 +18,7 @@
 // ------------------------------------------------------
 @media (min-width: $tab) {
   .site-logo {
-    width: 60px;
+    width: 40px;
   }
 }
 
@@ -26,16 +26,16 @@
 // ------------------------------------------------------
 @media (min-width: $desk) {
   .block-system-branding-block-home {
-    margin-bottom: -8em;
     background: #fff;
-    padding: 1.5em;
+    border: 3px solid $orange;
     border-radius: 5px;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
-    border: 3px solid $orange;
+    margin-bottom: -8em;
+    padding: 1.5em;
   }
 
   .site-logo {
-    width: 100px;
+    width: 80px;
   }
 }
 

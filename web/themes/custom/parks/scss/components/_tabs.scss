@@ -1,34 +1,34 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .region-content-top {
   ul.tabs {
-    display: flex;
-    flex-flow: row wrap;
     align-items: center;
-    justify-content: flex-start;
     background: $gray-05;
     border-radius: $rad;
-    padding: 0.125em;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0.125em;
 
     > li {
       display: block;
       margin: 0.125em;
 
       a {
-        padding: 0.35em 0.75em;
         border-radius: $rad-inner;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-size: 10px;
         color: $gray-6;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        padding: 0.35em 0.75em;
+        text-transform: uppercase;
 
         &:hover,
         &:active,
         &:focus {
           background: rgba(255, 255, 255, 1);
-          color: $orange;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          color: $orange;
           color: $gray-3;
         }
 

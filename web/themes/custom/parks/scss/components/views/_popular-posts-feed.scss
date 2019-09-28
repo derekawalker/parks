@@ -1,17 +1,17 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .view-posts.view-display-id-block_2 {
   .views-row {
-    padding: .5rem;
     background: $white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    transition: all .25s ease-out;
+    padding: 0.5rem;
+    transition: all 0.25s ease-out;
 
     &:hover {
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
       transform: scale(1.01);
-      transition: all .5s ease-out;
-      box-shadow: 0 5px 8px rgba(0, 0, 0, .25);
+      transition: all 0.5s ease-out;
     }
   }
 
@@ -25,10 +25,10 @@
     }
 
     &--title {
-      margin: 0;
       background: $white;
-      padding: 1rem 1rem .75rem;
       font-size: 1.125em;
+      margin: 0;
+      padding: 1rem 1rem 0.75rem;
 
       a {
         color: $orange;

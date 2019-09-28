@@ -1,12 +1,12 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .node--type-post {
   .field--name-field-post-date {
-    margin: 0.25rem 0 0.5rem;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: $gray-9;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    margin: 0.25rem 0 0.5rem;
+    text-transform: uppercase;
   }
 
   .field--name-field-image {
@@ -31,9 +31,9 @@
     }
 
     > div {
+      align-items: center;
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
       justify-content: space-between;
       margin-bottom: 1rem;
 
@@ -50,22 +50,22 @@
   }
 
   .field--name-field-signature {
+    border-bottom: 1px solid $gray-e6;
     font-family: $font-script;
+    font-size: 2em;
     font-style: italic;
     font-weight: 900;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid $gray-e6;
-    font-size: 2em;
 
     &:before {
-      content: "- ";
+      content: '- ';
     }
   }
 
   .field--name-field-sponsored {
-    margin-bottom: 1.5rem;
     font-style: italic;
+    margin-bottom: 1.5rem;
   }
 
   .field--name-field-hours {
@@ -80,18 +80,18 @@
     margin-bottom: 1.5rem;
 
     a {
-      display: block;
       background: $blue-light;
-      color: $white;
       border-radius: 25px;
-      padding: 0 1em;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+      color: $white;
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 400;
       height: 50px;
       line-height: 50px;
-      text-decoration: none;
-      font-size: 1.25rem;
+      padding: 0 1em;
       text-align: center;
-      font-weight: 400;
-      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
       transition: all 0.5s ease-out;
 
       &:hover,
@@ -120,18 +120,18 @@
 
     .field__item {
       a {
-        margin: 0.25em;
-        display: block;
+        background: $white;
         border: 1px solid $blue-light;
         border-radius: $rad * 3;
-        text-decoration: none;
-        padding: 0.35em 1.25em 0.25em;
-        font-size: 0.6875em;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        font-weight: 400;
-        background: $white;
         color: $blue-light;
+        display: block;
+        font-size: 0.6875em;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        margin: 0.25em;
+        padding: 0.35em 1.25em 0.25em;
+        text-decoration: none;
+        text-transform: uppercase;
 
         &:hover,
         &:active,
@@ -145,9 +145,9 @@
 
   .node__links {
     background: $gray-f1;
-    padding: 1em;
-    margin: 1em 0;
     border-radius: $rad;
+    margin: 1em 0;
+    padding: 1em;
   }
 }
 
@@ -161,9 +161,9 @@
       }
 
       > div {
+        align-items: center;
         display: flex;
         flex-flow: row nowrap;
-        align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
 
@@ -181,16 +181,16 @@
 
     .field--name-field-phone {
       a {
-        display: inline;
         background: none;
-        color: $blue-light;
         border-radius: 0;
-        padding: 0;
-        line-height: 1.5;
-        font-size: 1em;
-        text-align: left;
-        font-weight: 300;
         box-shadow: none;
+        color: $blue-light;
+        display: inline;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.5;
+        padding: 0;
+        text-align: left;
         transition: none;
 
         &:hover,

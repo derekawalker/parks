@@ -1,0 +1,77 @@
+// Mobile (up to 567px) ---------------------------------
+// ------------------------------------------------------
+.path-node {
+  .field--name-field-image {
+    border-radius: 5px;
+    margin-bottom: 1em;
+    overflow: hidden;
+
+    img {
+      display: block;
+    }
+  }
+
+  .field__label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .field--type-entity-reference {
+    .field__items {
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 0.5em;
+    }
+
+    .field__item {
+      align-items: center;
+      border-bottom: 1px dashed #000;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+
+      a {
+        display: block;
+        font-weight: 700;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+
+        &:before {
+          color: $orange;
+          content: '\f05a';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          margin-right: 0.25em;
+        }
+      }
+
+      &:last-child {
+        border: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Phablet (568px to 767px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) {
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {
+}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {
+}

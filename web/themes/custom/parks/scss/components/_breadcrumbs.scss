@@ -1,4 +1,4 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .region-subbanner {
   .breadcrumb {
@@ -9,36 +9,37 @@
       flex-flow: row wrap;
 
       li {
+        color: $gray-c;
         display: block;
-        text-transform: uppercase;
         font-size: 10px;
+        font-weight: 400;
         letter-spacing: 0.1em;
         text-decoration: none;
-        color: $gray-c;
+        text-transform: uppercase;
 
         &:before {
-          padding-right: 2px;
-          padding-left: 3px;
           color: $gray-9;
+          padding-left: 3px;
+          padding-right: 2px;
         }
 
         &:last-child {
           &:after {
-            padding-right: 3px;
-            padding-left: 2px;
             color: $gray-9;
-            content: "\BB";
+            content: '\BB';
+            padding-left: 2px;
+            padding-right: 3px;
           }
         }
       }
 
       a {
-        text-transform: uppercase;
+        color: $gray-c;
+        display: inline-block;
         font-size: 10px;
         letter-spacing: 0.1em;
         text-decoration: none;
-        color: $gray-c;
-        display: inline-block;
+        text-transform: uppercase;
 
         &:hover,
         &:focus,

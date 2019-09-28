@@ -1,23 +1,23 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .block-responsive-menu-horizontal-menu {
   .horizontal-menu {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
     justify-content: center;
 
     .menu-item {
       display: block;
 
       a {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 700;
-        letter-spacing: 0.1em;
         color: $black;
         font-size: 0.875em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
         text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
 
         &:hover,
         &:active,

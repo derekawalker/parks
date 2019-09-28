@@ -1,12 +1,17 @@
 // Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
-.layout-sidebar-first {
-  background: rgba(0, 0, 0, 0.075);
+.view {
+  .view-content {
+    > h3 {
+      color: $brown;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      margin: 2em 0 1em;
+      text-transform: uppercase;
+    }
+  }
 }
-
-.region-sidebar-first {
-}
-
 // Phablet (568px to 767px) -----------------------------
 // ------------------------------------------------------
 @media (min-width: $phab) {

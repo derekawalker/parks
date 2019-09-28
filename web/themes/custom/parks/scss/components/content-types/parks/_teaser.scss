@@ -1,4 +1,4 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
 .node--view-mode-teaser.node--type-park {
   &:hover,
@@ -21,7 +21,7 @@
     display: flex;
 
     &.has-background {
-      min-height: 400px;
+      height: 40vw;
     }
   }
 
@@ -31,12 +31,11 @@
     color: #fff;
     display: flex;
     flex-flow: row nowrap;
-    font-family: $font-script;
-    font-size: 2.5em;
+    font-size: 1.1em;
     font-weight: 100;
     justify-content: space-between;
     margin: 0;
-    padding: 0.65em 1em 0.55em;
+    padding: 0.75em 1em;
     transition: 'background' 0.25s ease-out;
     width: 100%;
 
@@ -46,19 +45,61 @@
       font-weight: 900;
     }
   }
+
+  .field--name-title {
+    padding-right: 1em;
+  }
+}
+
+// Lanscape (568px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) and (max-width: $desk - 1) and (orientation: landscape) {
+  .node--view-mode-teaser.node--type-park {
+    .teaser-inner {
+      &.has-background {
+        height: 20vw;
+      }
+    }
+  }
+}
+
+// Phablet (568px to 767px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) {
 }
 
 // Tablet (768px to 1023px) -----------------------------
 // ------------------------------------------------------
 @media (min-width: $tab) {
+  .node--view-mode-teaser.node--type-park {
+    .teaser-title {
+      font-size: 1.25em;
+    }
+  }
 }
 
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
 @media (min-width: $desk) {
+  .node--view-mode-teaser.node--type-park {
+    .teaser-title {
+      font-size: 1.7em;
+    }
+
+    .teaser-inner {
+      &.has-background {
+        height: 30vw;
+      }
+    }
+  }
 }
 
 // Wide (over 1340px) -----------------------------------
 // ------------------------------------------------------
 @media (min-width: $wide) {
+  .node--view-mode-teaser.node--type-park {
+    .teaser-title {
+      font-size: 2em;
+    }
+  }
 }

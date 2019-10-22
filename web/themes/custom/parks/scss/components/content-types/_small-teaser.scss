@@ -24,9 +24,14 @@
   }
 
   .teaser-image {
-    img {
-      display: block;
-      width: 100%;
+    .field--name-field-image {
+      border-radius: 0;
+      margin-bottom: 0;
+
+      img {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
@@ -36,7 +41,8 @@
   }
 
   .teaser-title {
-    font-size: 1.5em;
+    color: $orange;
+    font-size: 1.25em;
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 0.25em;
@@ -54,7 +60,7 @@
 @media (min-width: $phab) {
   .node--view-mode-small-teaser {
     .teaser-title {
-      font-size: 1.65em;
+      font-size: 1.35em;
     }
   }
 }
@@ -67,11 +73,6 @@
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
 @media (min-width: $desk) {
-  .node--view-mode-small-teaser {
-    .teaser-title {
-      font-size: 1.75em;
-    }
-  }
 }
 
 // Wide (over 1340px) -----------------------------------

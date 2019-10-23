@@ -2,5 +2,11 @@ base:
   css:
     base:
       dist/css/styles.css: {}
-      "//use.fontawesome.com/releases/v5.7.2/css/all.css":
-        { type: external, minified: true }
+      '//use.fontawesome.com/releases/v5.7.2/css/all.css': { type: external, minified: true }
+parks-layouts:
+  version: 1.x
+  css:
+    theme:
+      dist/css/parks-layouts.css: {}
+  js:
+    dist/js/parks-layouts.js: {}

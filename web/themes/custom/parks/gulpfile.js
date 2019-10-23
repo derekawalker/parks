@@ -1,21 +1,21 @@
-var gulp = require("gulp"),
-  browserSync = require("browser-sync"),
-  sass = require("gulp-sass"),
-  prefix = require("gulp-autoprefixer"),
-  concat = require("gulp-concat"),
-  babel = require("gulp-babel"),
-  cp = require("child_process"),
-  sassGlob = require("gulp-sass-glob");
+var gulp = require('gulp'),
+  browserSync = require('browser-sync'),
+  sass = require('gulp-sass'),
+  prefix = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  babel = require('gulp-babel'),
+  cp = require('child_process'),
+  sassGlob = require('gulp-sass-glob');
 
 /**
  * Launch the Server
  */
-gulp.task("browser-sync", ["sass", "scripts"], function() {
+gulp.task('browser-sync', ['sass', 'layouts-sass', 'scripts'], function() {
   browserSync.init({
     open: false,
     injectChanges: true,
     // Change as required, also remember to set in theme settings
-    proxy: "utahparksguide.lndo.site"
+    proxy: 'utahparksguide.lndo.site'
   });
 });
 
@@ -23,13 +23,23 @@ gulp.task("browser-sync", ["sass", "scripts"], function() {
  * @task sass
  * Compile files from scss
  */
-gulp.task("sass", function() {
+gulp.task('sass', function() {
   return gulp
-    .src("scss/styles.scss")
+    .src('scss/styles.scss')
     .pipe(sassGlob())
     .pipe(sass())
-    .pipe(prefix(["last 3 versions", "> 1%", "ie 8"], { cascade: true }))
-    .pipe(gulp.dest("dist/css"))
+    .pipe(prefix(['last 3 versions', '> 1%', 'ie 8'], { cascade: true }))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('layouts-sass', function() {
+  return gulp
+    .src('scss/parks-layouts.scss')
+    .pipe(sassGlob())
+    .pipe(sass())
+    .pipe(prefix(['last 3 versions', '> 1%', 'ie 8'], { cascade: true }))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -37,16 +47,16 @@ gulp.task("sass", function() {
  * @task scripts
  * Compile files from js
  */
-gulp.task("scripts", function() {
+gulp.task('scripts', function() {
   return gulp
-    .src(["js/*.js", "js/parks.js"])
+    .src(['js/*.js', 'js/parks.js'])
     .pipe(
       babel({
-        presets: ["@babel/env"]
+        presets: ['@babel/env']
       })
     )
-    .pipe(concat("scripts.js"))
-    .pipe(gulp.dest("dist/js"))
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -54,17 +64,15 @@ gulp.task("scripts", function() {
  * @task clearcache
  * Clear all caches
  */
-gulp.task("clearcache", function(done) {
-  return cp
-    .spawn("drush", ["cache-rebuild"], { stdio: "inherit" })
-    .on("close", done);
+gulp.task('clearcache', function(done) {
+  return cp.spawn('drush', ['cache-rebuild'], { stdio: 'inherit' }).on('close', done);
 });
 
 /**
  * @task reload
  * Refresh the page after clearing cache
  */
-gulp.task("reload", ["clearcache"], function() {
+gulp.task('reload', ['clearcache'], function() {
   browserSync.reload();
 });
 
@@ -73,14 +81,14 @@ gulp.task("reload", ["clearcache"], function() {
  * Watch scss files for changes & recompile
  * Clear cache when Drupal related files are changed
  */
-gulp.task("watch", function() {
-  gulp.watch(["scss/*.scss", "scss/**/*.scss"], ["sass"]);
-  gulp.watch(["js/*.js"], ["scripts"]);
-  gulp.watch(["templates/*.html.twig", "**/*.yml"], ["reload"]);
+gulp.task('watch', function() {
+  gulp.watch(['scss/*.scss', 'scss/**/*.scss'], ['sass', 'layouts-sass']);
+  gulp.watch(['js/*.js'], ['scripts']);
+  gulp.watch(['templates/*.html.twig', '**/*.yml'], ['reload']);
 });
 
 /**
  * Default task, running just `gulp` will
  * compile Sass files, launch BrowserSync, watch files.
  */
-gulp.task("default", ["browser-sync", "watch"]);
+gulp.task('default', ['browser-sync', 'watch']);

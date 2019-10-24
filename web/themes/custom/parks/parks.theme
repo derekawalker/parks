@@ -14,3 +14,9 @@ function parks_preprocess_comment(&$variables) {
   $variables['author'] = \Drupal::service('renderer')->render($username);
   $variables['submitted'] = t('@username', ['@username' => $variables['author']]);
 }
+
+function parks_preprocess_field__node__field_difficulty(array &$variables)
+{
+  $key = $variables['element']['#items']->value;
+  $variables['items'][0]['key'] = $key;
+}

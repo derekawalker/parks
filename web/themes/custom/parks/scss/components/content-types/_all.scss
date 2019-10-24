@@ -11,11 +11,32 @@
     }
   }
 
-  .field__label {
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .field--label-above {
+    margin-bottom: 1.5em;
+
+    .field__label {
+      background: $teal;
+      border-radius: 3px 3px 0 0;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      padding: 0.35em 0.75em;
+      text-transform: uppercase;
+    }
+
+    > .field__item,
+    > .field__items {
+      background: #fff;
+      border: 1px solid $gray-10;
+      border-radius: 0 0 3px 3px;
+      border-top: none;
+      padding: 0.75em 1em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .field--type-entity-reference {
@@ -51,6 +72,26 @@
       &:last-child {
         border: 0;
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .field--name-field-fees,
+  .field--name-field-website {
+    .field__label {
+      &:before {
+        content: '\f53a';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 0.25em;
+      }
+    }
+  }
+
+  .field--name-field-website {
+    .field__label {
+      &:before {
+        content: '\f0c1';
       }
     }
   }

@@ -1003,6 +1003,18 @@ header {
     .social-links-block li a {
       display: block; }
 
+.block-views-blockarticles-block-1 .block-title h2:before {
+  content: '\f1ea';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 0.25em; }
+
+.block-views-blockhikes-block-1 .block-title h2:before {
+  content: '\f6ec';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 0.25em; }
+
 .region-sidebar-first .block {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.5rem;
@@ -1014,7 +1026,7 @@ header {
   .region-sidebar-first .block .block-title {
     margin-bottom: 0.5em; }
     .region-sidebar-first .block .block-title h2 {
-      font-size: 0.675em;
+      font-size: 0.875em;
       font-weight: 700;
       letter-spacing: 0.1em;
       margin-top: 0;
@@ -1071,11 +1083,26 @@ header {
   .node .field--name-field-image img {
     display: block; }
 
-.node .field__label {
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase; }
+.node .field--label-above {
+  margin-bottom: 1.5em; }
+  .node .field--label-above .field__label {
+    background: #1aa489;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: 0.35em 0.75em;
+    text-transform: uppercase; }
+  .node .field--label-above > .field__item,
+  .node .field--label-above > .field__items {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 3px 3px;
+    border-top: none;
+    padding: 0.75em 1em; }
+  .node .field--label-above:last-child {
+    margin-bottom: 0; }
 
 .node .field--type-entity-reference .field__items {
   background: rgba(255, 255, 255, 0.5);
@@ -1112,6 +1139,16 @@ header {
   .node .field--type-entity-reference .field__item:last-child {
     border: 0;
     margin-bottom: 0; }
+
+.node .field--name-field-fees .field__label:before,
+.node .field--name-field-website .field__label:before {
+  content: '\f53a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 0.25em; }
+
+.node .field--name-field-website .field__label:before {
+  content: '\f0c1'; }
 
 .node--view-mode-small-teaser {
   background: #fff;
@@ -1206,6 +1243,31 @@ header {
   .node--view-mode-teaser .teaser-title {
     font-size: 1.35em; } }
 
+.node--type-hike .field--name-field-difficulty .field__item:before {
+  content: '\f111';
+  display: inline-block;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 0.25em; }
+
+.node--type-hike .field--name-field-difficulty .field--value-0 {
+  color: #1aa489; }
+  .node--type-hike .field--name-field-difficulty .field--value-0:before {
+    content: '\f111'; }
+
+.node--type-hike .field--name-field-difficulty .field--value-1 {
+  color: #137bb0; }
+  .node--type-hike .field--name-field-difficulty .field--value-1:before {
+    content: '\f0c8'; }
+
+.node--type-hike .field--name-field-difficulty .field--value-2 {
+  color: #000; }
+  .node--type-hike .field--name-field-difficulty .field--value-2:before {
+    content: '\f0c8';
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+
 .page-node-type-park .region-content .region-inner {
   padding: 1.5em 0; }
 
@@ -1217,27 +1279,76 @@ header {
   .page-node-type-park .node--type-park .field--name-field-image img {
     width: 100%; }
 
-.page-node-type-park .node--type-park .field--name-body {
+.page-node-type-park .node--type-park .parks--main-fields {
   padding: 0 1.5em; }
 
-.page-node-type-park .node--type-park .field--name-field-map {
-  background: #fff;
-  border-radius: 5px 5px 0 0;
-  margin: 0 1.5rem;
-  padding: 1rem 1.5rem 1.5rem; }
+.page-node-type-park .node--type-park .parks--supporting-fields {
+  padding: 0 1.5em; }
+  .page-node-type-park .node--type-park .parks--supporting-fields > .field {
+    margin-bottom: 1.5em; }
+    .page-node-type-park .node--type-park .parks--supporting-fields > .field:last-child {
+      margin-bottom: 0; }
 
-.page-node-type-park .node--type-park .field--name-field-address {
+.page-node-type-park .node--type-park .parks--location-fields {
   background: #fff;
-  margin: 0 1.5rem;
-  padding: 0 1.5rem 1rem; }
-  .page-node-type-park .node--type-park .field--name-field-address p {
-    margin: 0; }
+  border-radius: 5px;
+  margin: 1.5em;
+  padding: 2.25em 1.5em 1.5em;
+  position: relative; }
+  .page-node-type-park .node--type-park .parks--location-fields > h4 {
+    background: #1aa489;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    left: 0;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.35em 0.75em;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0; }
+    .page-node-type-park .node--type-park .parks--location-fields > h4:before {
+      content: '\f3c5';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-right: 0.25em; }
+  .page-node-type-park .node--type-park .parks--location-fields .field--label-above .field__label {
+    background: none;
+    border-radius: 0;
+    color: #000;
+    padding: 0; }
+  .page-node-type-park .node--type-park .parks--location-fields .field--label-above > .field__item,
+  .page-node-type-park .node--type-park .parks--location-fields .field--label-above > .field__items {
+    background: #fff;
+    border: 0;
+    border-radius: 0;
+    padding: 0; }
+  .page-node-type-park .node--type-park .parks--location-fields > .field {
+    margin-bottom: 1.5em; }
+    .page-node-type-park .node--type-park .parks--location-fields > .field:last-child {
+      margin-bottom: 0; }
 
-.page-node-type-park .node--type-park .field--name-field-map-pdf {
-  background: #fff;
-  border-radius: 0 0 5px 5px;
-  margin: 0 1.5rem;
-  padding: 0 1.5rem 1.5rem; }
+.page-node-type-park .node--type-park .field--name-field-fees .field__item:last-child .paragraph {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
+
+.page-node-type-park .node--type-park .field--name-field-fees .paragraph {
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  padding: 0.5em 0; }
+  .page-node-type-park .node--type-park .field--name-field-fees .paragraph .field--name-field-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; }
+    .page-node-type-park .node--type-park .field--name-field-fees .paragraph .field--name-field-label:after {
+      content: ':'; }
+  .page-node-type-park .node--type-park .field--name-field-fees .paragraph .field--name-field-value {
+    font-weight: 900;
+    line-height: 1.2; }
+
+.page-node-type-park .node--type-park .field--name-field-address p {
+  margin: 0; }
 
 @media (min-width: 1440px) {
   .page-node-type-park .node--type-park .field--name-field-image {
